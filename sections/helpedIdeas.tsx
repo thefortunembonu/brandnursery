@@ -6,7 +6,7 @@ const HelpedIdeas = () => {
 
     const ideas = ['/images/a.png','/images/b.png','/images/c.png','/images/d.png','/images/e.png','/images/f.png','/images/g.png','/images/h.png', '/images/i.png','/images/j.png' ]
   return (
-    <section className='lg:px-60 px-12 lg:py-24 py-6 bg-primary'>
+    <section id='helpedideas' className='lg:px-60 px-12 lg:py-24 py-6 bg-primary'>
 
           <h1 className='font-bold text-gray-100 text-4xl md:text-5xl'>Ideas We Have Built and Grown</h1>
 <div className = 'mt-8 lg:mt-16 overflow-hidden '>

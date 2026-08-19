@@ -5,7 +5,7 @@ import brandnursery from '../images/brandnursery.svg'
 
 const Footer = () => {
   return (
-    <section className='lg:px-60 px-12 py-24 bg-[#000027] text-center'>
+    <section id='footer' className='lg:px-60 px-12 py-24 bg-[#000027] text-center'>
         <div className='space-y-6 '>
 <h1 className='font-bold text-secondary text-4xl md:text-5xl'>Have an idea to grow?</h1>
 

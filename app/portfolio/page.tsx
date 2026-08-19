@@ -1,6 +1,8 @@
+
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const portfolio = () => {
 
@@ -67,7 +69,20 @@ const portfolio = () => {
 
 
   return (
-    <div className=' pt-26 bg-gray-900'>
+  
+  <motion.div 
+    variants={{
+      hidden: {opacity: 0, x: 100},
+      show: {opacity: 1, x: 0},
+    }}
+  
+  initial="hidden"
+  animate="show"
+ transition={{duration: 0.5}}
+    
+    
+    
+    className=' pt-26 bg-gray-900'>
         <nav >
             <div className='flex gap-x-1 bg-gray-950/30  py-2 px-2 lg:px-6 overflow-x-scroll lg:overflow-clip '>
                 {items.map((item, idx)=> {
@@ -82,7 +97,7 @@ const portfolio = () => {
 
 <div className='text-gray-100/80 flex items-center flex-wrap gap-4 md:gap-6  py-4 px-4 bg-gray-900/80 rounded-xl md:justify-center lg:justify-start'>
     {packs.map((pack, idx)=> {
-      return <Link href={`portfolio/${pack.link}`}> <div key={idx} className='flex-col w-full h-full min-w-80 lg:w-100 lg:h-80 text-xs text-nowrap bg-gray-800 rounded-xl '>
+      return <Link key={idx} href={`portfolio/${pack.link}`}> <div  className='flex-col w-full h-full min-w-80 lg:w-100 lg:h-80 text-xs text-nowrap bg-gray-800 rounded-xl '>
       
 <Image src={pack.img} width={500} height={500} alt='logo' className='object-cover rounded-t-xl h-3/4'/>
 
@@ -100,7 +115,9 @@ const portfolio = () => {
     })}
     </div>     
      </div>
-    </div>
+    </motion.div>
+   
+  
   )
 }
 

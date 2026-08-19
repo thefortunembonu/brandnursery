@@ -20,20 +20,23 @@ const Navbar = () => {
   return (
     <div className='fixed shadow-sm  w-full z-20 backdrop-blur-sm bg-gray-100/90'>
    <nav className='  px-12 py-8 flex items-center justify-between '>
+        <Link href={'/'}>
         <Image src={'/images/wordmark.png'} 
         alt={'brand_logo'}
         width={500}
         height={500}
         className='object-contain w-48'
+        priority
         />
+        </Link>
 
        
           <ul className=' lg:flex hidden  gap-x-12 items-center font-medium '>
-                    <Link href={'#'}>
+                    <Link href={'/'}>
                      <li className='text-primary py-2 border-b-3 border-gray-100/10
                      hover:border-b-3 hover:border-secondary '> Home</li>
                      </Link>
-                      <Link href={'#'}>  <li className='text-primary py-2 border-b-3 border-gray-100/10
+                      <Link href={'#footer'}>  <li className='text-primary py-2 border-b-3 border-gray-100/10
                      hover:border-b-3 hover:border-secondary '> Contact Us</li>
                       </Link>
                     
@@ -52,7 +55,7 @@ const Navbar = () => {
 
                      
                     
-                      <Link href={'#'}>
+                      <Link href={'/portfolio'}>
  <li className='text-primary py-2 border-b-3 border-gray-100/10
                      hover:border-b-3 hover:border-secondary
                      flex items-center gap-2 ' >Portfolio 

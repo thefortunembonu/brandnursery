@@ -1,15 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
 import Button from '@/components/Button'
+import {motion} from 'framer-motion'
 
 const HeroSection = () => {
   return (
-    <section className='relative  px-6 lg:px-60 lg:py-24 py-6' >
+    <section id='home' className='relative  px-6 lg:px-60 lg:py-24 py-6' >
+        
+        
         <Image src={'/images/bg.jpg'} fill alt={'hero_img'}
         priority
         className='object-cover absolute -z-10 animate-pulse blur-xs'/>
 <div className='grid grid-cols-1 md:grid-cols-2 text-center lg:text-start lg:gap-4 z-10 '>
-    <div className='lg:max-w-150  lg:space-y-10'>
+    <div 
+   
+    
+    
+    className='lg:max-w-150  lg:space-y-10'>
         <h1 className='font-extrabold text-6xl lg:text-8xl mt-36'>
             from Idea <p className='text-secondary'>to Identity</p>
           <p>to Product</p>

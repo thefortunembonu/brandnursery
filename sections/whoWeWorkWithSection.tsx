@@ -3,7 +3,7 @@ import React from 'react'
 
 const WhoWeWorkWithSection = () => {
   return (
-    <section className='lg:px-60 px-12 lg:py-48 py-6 bg-secondary'>
+    <section id='workwith' className='lg:px-60 px-12 lg:py-48 py-6 bg-secondary'>
          <h1 className='font-bold text-primary text-4xl md:text-5xl'>Who We work With</h1>
         <div className='grid lg:grid-cols-3 gap-6 lg:gap-x-48 py-12'>
 <div className='space-y-4'>

@@ -54,22 +54,28 @@ const MobileNavbar = ({setShowNav}: MobileNavbarProps) => {
   exit={{opacity: 0, x: 100}}
   transition={{duration: 0.3}}
     
-    className='fixed h-screen bg-gray-100/95 z-50 inset-0 px-6 py-8 mr-12'>
+    className='fixed h-screen bg-gray-100/97 backdrop-blur z-50 inset-0 px-6 py-8 mr-12'>
  <div className=' relative  '>
 
-    <Image src={'/images/wordmark.png'} 
+   <Link href={'/'} >
+   <Image 
+   onClick={()=>setShowNav(prev=>!prev)}
+   src={'/images/wordmark.png'} 
     alt={'brand_logo'}
     width={500}
     height={500}
     className='object-contain w-48'
     />
-        <nav className=' flex flex-col gap-y-4 pt-12'>
-  
-                     <button className='w-full  text-start text-primary py-4 border-b-3 border-gray-900/20 cursor-pointer
+   </Link> 
+        <nav className=' flex flex-col gap-y-4 pt-12  '>
+          <Link href={'/'}>
+                     <button  onClick={()=>setShowNav(prev=>!prev)} className='w-full  text-start text-primary py-4 border-b-3 border-gray-900/20 cursor-pointer
                      hover:border-b-3 hover:border-secondary '> Home</button>
-                 
-                      <button className='w-full cursor-pointer text-start text-primary py-4 border-b-3 border-gray-900/20
+                     </Link>
+                 <Link href={'/#footer'}>
+                      <button  onClick={()=>setShowNav(prev=>!prev)}  className='w-full cursor-pointer text-start text-primary py-4 border-b-3 border-gray-900/20
                      hover:border-b-3 hover:border-secondary '> Contact Us</button>
+                     </Link>
                      
                         <button 
                        
@@ -87,7 +93,7 @@ const MobileNavbar = ({setShowNav}: MobileNavbarProps) => {
       transition={{ duration: 0.2 }}
       className="overflow-hidden">
  {items.map((item, idx)=> {
-                        return   <button key={idx} className='w-full cursor-pointer  text-start text-gray uppercase text-sm pl-6 py-4 border-b border-gray-900/20
+                        return   <button  key={idx} className='w-full cursor-pointer  text-start text-gray uppercase text-sm pl-6 py-4 border-b border-gray-900/20
                   '> {item.label}</button>
                 
                       })}
@@ -95,7 +101,7 @@ const MobileNavbar = ({setShowNav}: MobileNavbarProps) => {
 </AnimatePresence>
 
                      
-                       <Link href={'/portfolio'}>  <button className='w-full  text-start text-primary py-4 cursor-pointer border-b-3 border-gray-900/20
+                       <Link href={'/portfolio'}>  <button  onClick={()=>setShowNav(prev=>!prev)} className='w-full  text-start text-primary py-4 cursor-pointer border-b-3 border-gray-900/20
                      hover:border-b-3 hover:border-secondary '> Portfolio</button>
                       </Link>
         </nav>

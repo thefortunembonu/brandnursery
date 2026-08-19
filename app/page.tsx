@@ -1,18 +1,28 @@
+
+"use client"
 import HelpedIdeas from "@/sections/helpedIdeas";
 import HeroSection from "@/sections/heroSection";
 import IntroSection from "@/sections/introSection";
 import ServicesSection from "@/sections/servicesSection";
 import WhoWeWorkWithSection from "@/sections/whoWeWorkWithSection";
-import Image from "next/image";
+import {motion} from 'framer-motion'
 
 export default function Home() {
   return (
-    <div>
+    <motion.div 
+    variants={{
+      hidden: {opacity: 0, y: -100},
+      show: {opacity: 1, y: 0},
+    }}
+  
+  initial="hidden"
+  animate="show"
+ transition={{duration: 0.5}}>
      <HeroSection/>
      <IntroSection/>
      <ServicesSection/>
      <WhoWeWorkWithSection/>
      <HelpedIdeas/>
-    </div>
+    </motion.div>
   );
 }
