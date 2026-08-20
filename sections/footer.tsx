@@ -1,9 +1,13 @@
+'use client'
 import Button from '@/components/Button'
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import brandnursery from '../images/brandnursery.svg'
+import StartProjectModal from '@/components/startProjectModal'
+import { AnimatePresence } from 'motion/react'
 
 const Footer = () => {
+    const [showModal, setShowModal] = useState(false)
   return (
     <section id='footer' className='lg:px-60 px-12 py-24 bg-[#000027] text-center'>
         <div className='space-y-6 '>
@@ -11,10 +15,10 @@ const Footer = () => {
 
         <p className='text-gray-100/60'>Whether you're starting something new, rebuilding something existing, or creating what's next, we'd love to hear about it.</p>
         <p className='text-gray-100/60'>Tell us what you are building.</p>
-        <Button variant='primary'>Start a Project</Button>
+        <Button  onClick={()=>setShowModal(true)} variant='primary'>Start a Project</Button>
         </div>
 
-        <div className='grid lg:grid-cols-3 gap-8 py-8'>
+        <div className='grid grid-cols-2 md:grid-cols-3 gap-8 py-8 text-start md:text-center'>
 <div>
     <h1 className='font-medium text-2xl lg:text-3xl pb-4 text-secondary'>Explore</h1>
     <span className='text-gray-100/60 space-y-2 lg:space-y-4'>
@@ -120,6 +124,9 @@ c0 83 1 82 -72 63z"/>
             <p className='text-gray-100/60 pt-1'>&copy; 2026 Brandnursery. All rights reserved.</p>
         </div>
         
+     <AnimatePresence >
+{showModal && <StartProjectModal setShowModal={setShowModal}/>}
+     </AnimatePresence>
         
         </section>
   )

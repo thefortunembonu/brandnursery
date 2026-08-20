@@ -3,7 +3,7 @@ import React from 'react'
 
 const IntroSection = () => {
   return (
-    <section id='intro' className='bg-primary lg:px-60 px-12 lg:py-24 py-6 text-center lg:text-start '>
+    <section id='intro' className='bg-primary md:px-24 xl:px-60 lg:py-24  py-6 text-center lg:text-start '>
 
         <h1 className='font-bold text-secondary text-4xl md:text-5xl'>Introduction</h1>
         <div className='max-w-200 space-y-6 my-6 '>

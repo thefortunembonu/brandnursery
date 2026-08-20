@@ -3,11 +3,11 @@ import React from 'react'
 
 const WhoWeWorkWithSection = () => {
   return (
-    <section id='workwith' className='lg:px-60 px-12 lg:py-48 py-6 bg-secondary'>
-         <h1 className='font-bold text-primary text-4xl md:text-5xl'>Who We work With</h1>
+    <section id='workwith' className='md:px-24 xl:px-60   px-12 lg:py-48 py-6 bg-secondary'>
+         <h1 className='font-bold text-gray-100 text-4xl md:text-5xl'>Who We work With</h1>
         <div className='grid lg:grid-cols-3 gap-6 lg:gap-x-48 py-12'>
 <div className='space-y-4'>
-    <h2 className='font-medium text-gray-100 text-3xl lg:text-4xl '>
+    <h2 className='font-medium text-primary text-3xl lg:text-4xl '>
         Start Ups
     </h2>
     <p className='text-gray text-lg'>
@@ -15,7 +15,7 @@ const WhoWeWorkWithSection = () => {
     </p>
 </div>
 <div className='space-y-4'>
-    <h2 className='font-medium text-gray-100 text-3xl lg:text-4xl '>
+    <h2 className='font-medium text-primary text-3xl lg:text-4xl '>
         Growing Businesses
     </h2>
     <p className='text-gray text-lg'>
@@ -23,7 +23,7 @@ const WhoWeWorkWithSection = () => {
     </p>
 </div>
 <div className='space-y-4'>
-    <h2 className='font-medium text-gray-100 text-3xl lg:text-4xl '>
+    <h2 className='font-medium text-primary text-3xl lg:text-4xl '>
         Established 
 Brands
     </h2>

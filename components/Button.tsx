@@ -10,9 +10,9 @@ const styles = {
   primary:
     "bg-secondary text-white hover:bg-secondary/80 hover:text-gray-900",
   secondary:
-    "border border-secondary text-secondary hover:bg-secondary hover:text-gray-900",
+    "border border-secondary text-secondary backdrop-blur-xs hover:bg-secondary hover:text-gray-900",
     secondaryblue:
-    "border border-primary text-primary hover:bg-primary hover:text-white",
+    "border border-primary text-primary hover:bg-primary hover:text-white backdrop-blur-xs",
      primaryblue:
     " bg-primary text-gray-100 hover:bg-primary/80",
     disabled: 

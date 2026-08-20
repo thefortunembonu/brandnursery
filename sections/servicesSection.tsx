@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const ServicesSection = () => {
   return (
-    <section id='services' className='relative bg-gray-200/70 lg:px-60 px-12 lg:py-24 py-6'>
+    <section id='services' className='relative bg-gray-200/70  px-12 md:px-24 xl:px-60 lg:py-24 py-6'>
          <Image src={'/images/bg.jpg'} fill alt={'hero_img'}
                 priority
                 className='object-cover absolute -z-10 animate-pulse blur-xs'/>

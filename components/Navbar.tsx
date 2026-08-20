@@ -9,12 +9,14 @@ import DropDownMenu from './DropDownMenu'
 import { CiMenuBurger } from 'react-icons/ci'
 import MobileNavbar from './MobileNavbar'
 import { AnimatePresence } from 'motion/react'
+import StartProjectModal from './startProjectModal'
 
 
 const Navbar = () => {
 
     const [servicesShowDropDown, setServicesShowDropDown] = useState(false)
     const [showNav, setShowNav] = useState(false)
+    const [showModal, setShowModal] = useState(false)
   
 
   return (
@@ -72,13 +74,20 @@ const Navbar = () => {
    
    
  
-        <div className='md:block hidden'><Button variant='secondaryblue'>Start a Project</Button></div>
+        <div className='md:block hidden'><Button onClick={()=>setShowModal(true)} variant='secondaryblue'>Start a Project</Button></div>
         <div onClick={() => setShowNav(prev=>!prev)} className='md:hidden block px-2 py-2  bg-gray-300/70 rounded-sm  cursor-pointer shadow-sm hover:scale-102'><CiMenuBurger className='text-gray-800 text-xl'/></div>
 <AnimatePresence>
 {showNav && <MobileNavbar  setShowNav={setShowNav}/>}
 </AnimatePresence>
         
+
     </nav>
+                 <AnimatePresence >
+                
+                    {showModal &&   <div className='fixed h-screen  backdrop-blur-xs z-50 inset-0 px-6 py-8 mr-12 '><StartProjectModal setShowModal={setShowModal}/> </div>}
+                 
+
+     </AnimatePresence>
     </div>
  
   )
