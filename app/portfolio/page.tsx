@@ -42,22 +42,16 @@ const portfolio = () => {
      link: 'branding'
   },
   {
-    title: 'Packaging Design',
-     tags: ['Photoshop', 'Illustrator', 'Figma'],
+    title: 'Graphics Design',
+     tags: ['Photoshop', 'Illustrator'],
     img: '/images/packaging.jpg',
-    link: 'packaging-design'
-  },
-  {
-    title: 'Visual Identity Design',
-     tags: ['Photoshop', 'Illustrator',],
-    img: '/images/product.jpg',
-    link: 'product-design'
+    link: 'graphics'
   },
   {
     title: 'Product Design',
-     tags: ['Photoshop', 'Illustrator', 'Figma'],
-    img: '/images/uiux.png',
-    link: 'ui-ux'
+     tags: ['Photoshop', 'Illustrator', 'Figma', 'Blender'],
+    img: '/images/product.jpg',
+    link: 'product-design'
   },
   {
     title: 'Product Development',
@@ -82,7 +76,7 @@ const portfolio = () => {
     
     
     
-    className=' pt-26 bg-gray-100'>
+    className=' pt-26 md:pl-24 bg-gray-100'>
         {/* <nav >
             <div className='flex gap-x-1 bg-gray-950/30  py-2 px-2 lg:px-6 overflow-x-scroll lg:overflow-clip '>
                 {items.map((item, idx)=> {

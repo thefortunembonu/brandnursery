@@ -9,7 +9,7 @@ const HeroSection = () => {
 
     const [showModal, setShowModal] = useState(false)
   return (
-    <section id='home' className='relative px-6 md:px-24 xl:px-60 lg:py-24 py-6' >
+    <section id='home' className='relative px-6 md:px-24 xl:px-60 lg:py-24 py-6 scroll-auto' >
         
         
         <Image src={'/images/bg.jpg'} fill alt={'hero_img'}

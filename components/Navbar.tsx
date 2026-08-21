@@ -34,7 +34,7 @@ const Navbar = () => {
 
        
           <ul className=' lg:flex hidden  gap-x-12 items-center font-medium '>
-                    <Link href={'/'}>
+                    <Link href={'/#home'}>
                      <li className='text-primary py-2 border-b-3 border-gray-100/10
                      hover:border-b-3 hover:border-secondary '> Home</li>
                      </Link>

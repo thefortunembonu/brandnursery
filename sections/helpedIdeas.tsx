@@ -8,7 +8,7 @@ const HelpedIdeas = () => {
 
     const ideas = ['/images/a.png','/images/b.png','/images/c.png','/images/d.png','/images/e.png','/images/f.png','/images/g.png','/images/h.png', '/images/i.png','/images/j.png' ]
   return (
-    <section id='helpedideas' className='md:px-24 xl:px-60 lg:py-24 py-6 bg-primary'>
+    <section id='helpedideas' className='md:px-24 xl:px-60 lg:py-24 py-6 bg-linear-to-r from-primary via-primary/95 to-primary'>
 
           <h1 className='font-bold text-gray-100 text-4xl md:text-5xl'>Ideas We Have Built and Grown</h1>
 
@@ -24,7 +24,7 @@ const HelpedIdeas = () => {
 
 
 </div>
-     <div className=" mt-6 text-center
+     <div className=" mt-6 lg:text-start text-center
      ">
       <Link href={'/portfolio'}>
 <Button variant='secondary'>See our portfolio</Button>
