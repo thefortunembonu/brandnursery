@@ -1,25 +1,52 @@
 'use client'
 import Button from '@/components/Button'
 import React, { useState } from 'react'
-import Image from 'next/image'
-import brandnursery from '../images/brandnursery.svg'
+import {motion} from 'framer-motion'
 import StartProjectModal from '@/components/startProjectModal'
 import { AnimatePresence } from 'motion/react'
 
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const child = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+    },
+  },
+}
 const Footer = () => {
     const [showModal, setShowModal] = useState(false)
   return (
-    <section id='footer' className='lg:px-60 px-12 py-24 bg-[#000027] text-center'>
-        <div className='space-y-6 '>
+    <motion.section
+   
+   variants={container}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: true, amount: 0.2 }} id='footer' className='lg:px-60 px-6 py-24 bg-[#000027] text-center'>
+        <motion.div variants={child} className='space-y-6 '>
 <h1 className='font-bold text-secondary text-4xl md:text-5xl'>Have an idea to grow?</h1>
 
         <p className='text-gray-100/60'>Whether you're starting something new, rebuilding something existing, or creating what's next, we'd love to hear about it.</p>
         <p className='text-gray-100/60'>Tell us what you are building.</p>
         <Button  onClick={()=>setShowModal(true)} variant='primary'>Start a Project</Button>
-        </div>
+        </motion.div>
 
         <div className='grid grid-cols-2 md:grid-cols-3 gap-8 py-8 text-start md:text-center'>
-<div>
+<motion.div variants={child}>
     <h1 className='font-medium text-2xl lg:text-3xl pb-4 text-secondary'>Explore</h1>
     <span className='text-gray-100/60 space-y-2 lg:space-y-4'>
          <p className='cursor-pointer hover:text-secondary'>Work</p>
@@ -28,37 +55,41 @@ const Footer = () => {
     <p className='cursor-pointer hover:text-secondary'>Contact</p>
     </span>
    
-</div>
-<div>
+</motion.div>
+<motion.div variants={child}>
     <h1 className='font-medium text-2xl lg:text-3xl pb-4  text-secondary'>Services</h1>
     <span className='text-gray-100/60 space-y-2 lg:space-y-4'>
     <p>Brand Strategy</p>
     <p>Visual Design</p>
     <p>Product Design</p>
-    <p>Web Development</p>
-    <p>Digital Products</p>
+    <p>Software Development</p>
+   
     </span>
     
     
-</div>
-<div>
+</motion.div>
+<motion.div variants={child}>
       <h1 className='font-medium text-2xl lg:text-3xl pb-4  text-secondary'>Connect</h1>
-     <span className='text-gray-100/60 space-y-2 lg:space-y-4'>
+     <div className='flex flex-col text-gray-100/60 space-y-2 lg:space-y-4'>
        
-    <p className='cursor-pointer hover:text-secondary'>Facebook</p>
-    <p className='cursor-pointer hover:text-secondary'>TikTok</p>
-    <p className='cursor-pointer hover:text-secondary'>LinkedIn</p>
-    <p className='cursor-pointer hover:text-secondary'>Email</p>
-     </span>
+    <a href="https://web.facebook.com/profile.php?id=61574913773793"
+        target="_blank"
+        rel="noopener noreferrer" className='cursor-pointer hover:text-secondary'>Facebook</a>
+    <a href="https://wa.me/message/UVFBBJ6UQABQF1"
+        target="_blank"
+        rel="noopener noreferrer" className='cursor-pointer hover:text-secondary'>WhatsApp</a>
 
-</div>
+    <a href="https://x.com/brandnurseryhq"
+        target="_blank"
+        rel="noopener noreferrer" className='cursor-pointer hover:text-secondary'>X (fka Twitter)</a>
+
+     </div>
+
+</motion.div>
         </div>
 <hr className='border-0.5 border-gray-50/20'/>
         <div>
-            {/* <Image src={'images/brandnursery.svg'}
-            width={500}
-            height={500}
-            alt={'hero'}/> */}
+           
             <div>
 <svg className='mx-auto opacity-60 my-3' xmlns="http://www.w3.org/2000/svg"
  width="200" height="40" viewBox="0 0 600.000000 108.000000"
@@ -121,14 +152,14 @@ c0 83 1 82 -72 63z"/>
             
 
 
-            <p className='text-gray-100/60 pt-1'>&copy; 2026 Brandnursery. All rights reserved.</p>
+            <p className='text-gray-100/60 pt-1'>&copy; {new Date().getFullYear()} Brandnursery. All rights reserved.</p>
         </div>
         
      <AnimatePresence >
 {showModal && <StartProjectModal setShowModal={setShowModal}/>}
      </AnimatePresence>
         
-        </section>
+        </motion.section>
   )
 }
 

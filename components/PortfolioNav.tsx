@@ -13,8 +13,8 @@ const PortfolioNav = () => {
     .filter(Boolean)
 
   return (
-    <nav>
-      <ul className="my-4 flex items-center gap-2 rounded-lg px-4 py-2 text-xs font-medium uppercase text-gray shadow-lg">
+    <nav className='bg-primary border-t px-8 border-gray-500/20 '>
+      <ul className=" flex items-center gap-2 rounded-lg px-4 py-4 text-xs font-bold uppercase text-secondary ">
         {segments.map((segment, index) => {
           const href = '/' + segments.slice(0, index + 1).join('/')
 

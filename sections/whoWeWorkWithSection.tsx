@@ -1,9 +1,23 @@
+'use client'
 import Button from '@/components/Button'
-import React from 'react'
+import {motion} from 'framer-motion'
+import Link from 'next/link'
 
 const WhoWeWorkWithSection = () => {
   return (
-    <section id='workwith' className='md:px-24 xl:px-60   px-12 lg:py-48 py-6 bg-secondary'>
+    <motion.section
+   
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{
+        duration: 0.3,
+        ease: "easeOut",
+      }}
+    
+    
+    
+    id='workwith' className='md:px-24 xl:px-60   px-12 lg:py-48 py-6 bg-secondary'>
          <h1 className='font-bold text-gray-100 text-4xl md:text-5xl'>Who We work With</h1>
         <div className='grid lg:grid-cols-3 gap-6 lg:gap-x-48 py-12'>
 <div className='space-y-4'>
@@ -34,8 +48,12 @@ Brands
 </div>
        
         </div>
-          <Button variant='primaryblue'>See other brands worked with</Button>
-    </section>
+
+        <Link href={'/portfolio'}>
+<Button variant='primaryblue'>See other brands worked with</Button>
+        </Link>
+          
+    </motion.section>
   )
 }
 

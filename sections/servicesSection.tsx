@@ -1,16 +1,54 @@
-import Button from '@/components/Button'
-import React from 'react'
-import Image from 'next/image'
 
+'use client'
+import Button from '@/components/Button'
+import Image from 'next/image'
+import {AnimatePresence, motion} from 'framer-motion'
+import Link from 'next/link'
+import StartProjectModal from '@/components/startProjectModal'
+import { useState } from 'react'
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const child = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+    },
+  },
+}
 const ServicesSection = () => {
+
+
+  const [showModal, setShowModal] = useState(false)
   return (
-    <section id='services' className='relative bg-gray-200/70  px-12 md:px-24 xl:px-60 lg:py-24 py-6'>
+    <motion.section
+   variants={container}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: true, amount: 0.2 }}
+     
+    
+    
+    
+    id='services' className='relative bg-gray-200/70  px-12 md:px-24 xl:px-60 lg:py-24 py-6'>
          <Image src={'/images/bg.jpg'} fill alt={'hero_img'}
                 priority
                 className='object-cover absolute -z-10 animate-pulse blur-xs'/>
         <div>
         <h1 className='font-bold text-primary text-4xl md:text-5xl'>Services</h1>
-        <div className='space-y-6 py-6'>
+        <motion.div variants={child} className='space-y-6 py-6'>
              <h2 className='text-gray-900 font-medium  text-3xl '>
                 Brand Design and Development
             </h2>
@@ -31,11 +69,13 @@ const ServicesSection = () => {
 <p>Brand Guidelines</p>
 
 <p> Packaging & Marketing Assets.</p></div>
-
+<Link href={'/portfolio/branding'}>
 <Button variant='primary'>Explore Brand Services</Button>
-        </div>
+</Link>
 
-            <div className='space-y-6 py-6'>
+        </motion.div>
+
+            <motion.div variants={child} className='space-y-6 py-6'>
              <h2 className='text-gray-900 font-medium  text-3xl '>
                 Product Design and Development
             </h2>
@@ -59,10 +99,12 @@ MVP Development
 </p>
 
 </div>
-
+<Link href={'/portfolio/product-development'}>
 <Button variant='primary'>Explore Product Services</Button>
-        </div>
-            <div className='space-y-6 py-6'>
+</Link>
+
+        </motion.div>
+            <motion.div variants={child} className='space-y-6 py-6'>
              <h2 className='text-gray-900 font-medium  text-3xl '>
                 Why Brand + Product?
             </h2>
@@ -77,16 +119,21 @@ MVP Development
             </p>
 
 
-</div>
+</motion.div>
 
-<Button variant='primary'>Book a consultation call</Button>
+<Button variant='primary' onClick={()=>setShowModal(true)}>Book a consultation call</Button>
+
+
+     <AnimatePresence >
+{showModal && <StartProjectModal setShowModal={setShowModal}/>}
+     </AnimatePresence>
         </div>
 
      
 
         
 
-    </section>
+    </motion.section>
   )
 }
 

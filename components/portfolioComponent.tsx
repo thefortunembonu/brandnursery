@@ -20,11 +20,13 @@ const PortfolioComponent = ({title, img, tags, description, link}: PortfolioComp
     <div onMouseEnter={()=>{setShowDetails(true)}} onMouseLeave={()=>{setShowDetails(false)}} 
     onClick={()=>setShowDetails(prev=>!prev)}
     
-className='relative min-w-80 lg:w-100 min-h-88 lg:h-96 hover:scale-102 transition rounded-2xl shadow-sm '>
+className='relative  bg-gray md:max-w-100  hover:scale-102 transition rounded-2xl shadow-sm '>
         
 
-        {link && <div className='absolute top-8 hover:scale-90 hover:text-gray-100 animate-pulse cursor-pointer transition right-8 text-xl text-blue-500 bg-gray-800 rounded-full px-2 py-2  '> <a target='_blank' href={link} className=""><FaLink /></a></div>}
- <Image src={img} width={500} height={500} alt='logo' className='object-cover rounded-2xl w-full h-full'/>
+        {link && <div className='absolute top-8 hover:scale-90 hover:text-gray-100 animate-pulse cursor-pointer transition right-8 text-xl text-blue-500 bg-gray-800 rounded-full px-2 py-2  '> <a target='_blank'  
+        rel="noopener noreferrer" 
+        href={link}><FaLink  /></a></div>}
+ <Image src={img} width={500} height={500} alt='logo' className='object-cover rounded-2xl w-90 md:w-100 lg:w-full h-full md:h-90 lg:h-100'/>
       
      <div className={` 
         

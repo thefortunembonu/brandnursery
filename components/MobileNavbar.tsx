@@ -13,18 +13,12 @@ interface MobileNavbarProps {
 
 const MobileNavbar = ({setShowNav}: MobileNavbarProps) => {
 
-      const items = [{
-        label: 'Brand Strategy',
-        link:'brandstrategy'
-    },
+      const items = [
     {
-      label: 'Brand Identity Design',
+      label: 'Brand Strategy & Identity Design',
       link: '/brand-identity-design'
     },
-    {
-      label: 'UI/UX',
-      link: '/ui-ux'
-    },
+
     {
       label: 'Product Design',
       link: '/product-design'

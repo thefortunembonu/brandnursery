@@ -15,10 +15,10 @@ export default function PortfolioContainer  ({items}: PortfolioContainerProps) {
   return (              
 
 
-        <div className='flex gap-6 flex-wrap '>
+        <div className='flex gap-12 flex-wrap pt-20 md:pt-24 justify-center md:justify-start'>
  {
             items.map((item, idx)=> {
-                return <div key={idx} className="my-2 mx-4">
+                return <div key={idx}>
         <PortfolioComponent
          title={item.title}
          link={item.link}

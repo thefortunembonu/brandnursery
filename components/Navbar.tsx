@@ -10,6 +10,8 @@ import { CiMenuBurger } from 'react-icons/ci'
 import MobileNavbar from './MobileNavbar'
 import { AnimatePresence } from 'motion/react'
 import StartProjectModal from './startProjectModal'
+import PortfolioNav from './PortfolioNav'
+import { usePathname } from 'next/navigation'
 
 
 const Navbar = () => {
@@ -17,11 +19,16 @@ const Navbar = () => {
     const [servicesShowDropDown, setServicesShowDropDown] = useState(false)
     const [showNav, setShowNav] = useState(false)
     const [showModal, setShowModal] = useState(false)
+
+    const PathName = usePathname()
   
 
   return (
     <div className='fixed shadow-sm  w-full z-20 backdrop-blur-sm bg-gray-100/90'>
-   <nav className='  px-12 py-8 flex items-center justify-between '>
+   
+   
+   <div className="">
+<nav className='px-12 py-6 flex items-center justify-between '>
         <Link href={'/'}>
         <Image src={'/images/wordmark.png'} 
         alt={'brand_logo'}
@@ -82,6 +89,9 @@ const Navbar = () => {
         
 
     </nav>
+   {PathName.startsWith('/portfolio') &&<PortfolioNav/>}
+   </div>
+   
                  <AnimatePresence >
                 
                     {showModal &&   <div className='fixed h-screen  backdrop-blur-xs z-50 inset-0 px-6 py-8 mr-12 '><StartProjectModal setShowModal={setShowModal}/> </div>}

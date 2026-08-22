@@ -76,16 +76,7 @@ const portfolio = () => {
     
     
     
-    className=' pt-26 md:pl-24 bg-gray-100'>
-        {/* <nav >
-            <div className='flex gap-x-1 bg-gray-950/30  py-2 px-2 lg:px-6 overflow-x-scroll lg:overflow-clip '>
-                {items.map((item, idx)=> {
-                    return  <div key={idx} className='font-medium text-nowrap   bg-gray-900 px-2 text-sm text-gray-100 py-4 rounded-xl  cursor-pointer hover:bg-primary transition hover:border hover:border-gray-100'>
-                        {item.label}</div>
-                    
-                    })}
-            </div>
-        </nav> */}
+    className=' pt-32 md:pl-24 bg-gray-100'>
         <div className="p-4">
 
 

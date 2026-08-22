@@ -15,7 +15,7 @@ const HeroSection = () => {
         <Image src={'/images/bg.jpg'} fill alt={'hero_img'}
         priority
         className='object-cover absolute -z-10 animate-pulse blur-xs'/>
-<div className='md:flex items-center text-center lg:text-start lg:gap-4 z-10 '>
+<div className='md:flex items-center text-center md:text-start lg:gap-4 z-10 '>
     <div 
    
     
