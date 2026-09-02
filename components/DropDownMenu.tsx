@@ -16,15 +16,11 @@ const DropDownMenu = ({ showDropDown}: DropDownMenuProps) => {
       link: '/brand-identity-design'
     },
     {
-      label: 'UI/UX',
-      link: '/ui-ux'
-    },
-    {
-      label: 'Product Design',
+      label: 'Content Strategy',
       link: '/product-design'
     },
     {
-      label: 'Software Development',
+      label: 'Content Development',
       link: '/software-development'
     },
     {

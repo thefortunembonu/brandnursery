@@ -42,7 +42,7 @@ const Footer = () => {
 
         <p className='text-gray-100/60'>Whether you're starting something new, rebuilding something existing, or creating what's next, we'd love to hear about it.</p>
         <p className='text-gray-100/60'>Tell us what you are building.</p>
-        <Button  onClick={()=>setShowModal(true)} variant='primary'>Start a Project</Button>
+        <Button  onClick={()=>setShowModal(true)} variant='primary'>Work With Us</Button>
         </motion.div>
 
         <div className='grid grid-cols-2 md:grid-cols-3 gap-8 py-8 text-start md:text-center'>
@@ -61,8 +61,9 @@ const Footer = () => {
     <span className='text-gray-100/60 space-y-2 lg:space-y-4'>
     <p>Brand Strategy</p>
     <p>Visual Design</p>
-    <p>Product Design</p>
-    <p>Software Development</p>
+    <p>Digital Media Services</p>
+    <p>Content Strategy</p>
+    <p>Content Production</p>
    
     </span>
     
@@ -152,7 +153,7 @@ c0 83 1 82 -72 63z"/>
             
 
 
-            <p className='text-gray-100/60 pt-1'>&copy; {new Date().getFullYear()} Brandnursery. All rights reserved.</p>
+            <p className='text-gray-100/60 pt-1'>&copy; {new Date().getFullYear()} Brandnursery Media Ltd. All rights reserved.</p>
         </div>
         
      <AnimatePresence >

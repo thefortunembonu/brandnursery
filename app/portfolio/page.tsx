@@ -48,10 +48,10 @@ const portfolio = () => {
     link: 'graphics'
   },
   {
-    title: 'Product Design',
-     tags: ['Photoshop', 'Illustrator', 'Figma', 'Blender'],
-    img: '/images/product.jpg',
-    link: 'product-design'
+    title: 'Content Strategy & Development',
+     tags: ['Photoshop', 'Illustrator',],
+    img: '/images/content.png',
+    link: 'content-strategy'
   },
   {
     title: 'Product Development',

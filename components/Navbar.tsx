@@ -81,7 +81,7 @@ const Navbar = () => {
    
    
  
-        <div className='md:block hidden'><Button onClick={()=>setShowModal(true)} variant='secondaryblue'>Start a Project</Button></div>
+        <div className='md:block hidden'><Button onClick={()=>setShowModal(true)} variant='secondaryblue'>Work With Us</Button></div>
         <div onClick={() => setShowNav(prev=>!prev)} className='md:hidden block px-2 py-2  bg-gray-300/70 rounded-sm  cursor-pointer shadow-sm hover:scale-102'><CiMenuBurger className='text-gray-800 text-xl'/></div>
 <AnimatePresence>
 {showNav && <MobileNavbar  setShowNav={setShowNav}/>}

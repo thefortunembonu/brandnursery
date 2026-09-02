@@ -29,7 +29,7 @@ const HeroSection = () => {
         <p className="text-gray text-base md:text-[18px] lg:text-xl tracking-tight mt-4 "> We turn ambitious ideas into brands people recognize and products people use.</p>
 
         <div className='my-4 flex gap-4 lg:justify-start justify-center w-full'>
-            <Button variant='primary' loading={false} onClick={()=>setShowModal(true)}>Start a project</Button>
+            <Button variant='primary' loading={false} onClick={()=>setShowModal(true)}>Work With Us</Button>
 
             <Link href={'/portfolio'}>
              <Button variant='secondary'>Explore Our Work</Button></Link>

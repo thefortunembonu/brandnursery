@@ -20,12 +20,12 @@ const MobileNavbar = ({setShowNav}: MobileNavbarProps) => {
     },
 
     {
-      label: 'Product Design',
-      link: '/product-design'
+      label: 'Product Development',
+      link: '/product-dev'
     },
     {
-      label: 'Software Development',
-      link: '/software-development'
+      label: 'Content Strategy & Development',
+      link: '/content'
     },
     {
       label: 'Graphics & Visual Design',

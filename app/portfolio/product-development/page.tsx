@@ -15,7 +15,7 @@ const productdev = () => {
   {
     title: 'Website Design For Brandnursery',
      link: 'https://brandnurseryhq.vercel.app',
-     tags: ['NextJS', 'TailwindCSS',  'Figma'],
+     tags: ['NextJS', 'TailwindCSS', ],
     img: '/images/productdev/2.png',
      description:'A website development for a startup called Brandnursery. It also features a portfolio to showcase some of their works.'
   },

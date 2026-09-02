@@ -46,6 +46,18 @@ const Graphics = () => {
    img: '/images/graphics/4.jpg',
        description:'Playroom by wild is an online shop for adults to sort out their intimate needs and sexual wellness.'
   },
+    {
+    title: 'Flyer for Brandnursery',
+      tags: ['Photoshop', 'Illustrator'],
+   img: '/images/graphics/1.jpg',
+       description:'Brandnursery is a branding agency that helps businesses establish themselves, evolve, or become something bigger.'
+  },
+    {
+    title: 'Flyer for Brandnursery',
+      tags: ['Photoshop', 'Illustrator'],
+   img: '/images/graphics/14.jpg',
+       description:'Brandnursery is a branding agency that helps businesses establish themselves, evolve, or become something bigger.'
+  },
 
 ]
   return (

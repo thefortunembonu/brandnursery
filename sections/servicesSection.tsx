@@ -77,51 +77,38 @@ const ServicesSection = () => {
 
             <motion.div variants={child} className='space-y-6 py-6'>
              <h2 className='text-gray-900 font-medium  text-3xl '>
-                Product Design and Development
+                Content Strategy and Development
             </h2>
             <p className='text-gray text-lg'>
-              From a first MVP to a full-scale digital platform, we combine product strategy, design, and development to build useful digital experiences.
+              We build strategic content systems that help brands communicate clearly, connect with their audience, and turn attention into meaningful growth.
             </p>
             <div className='text-gray text-lg space-y-2'>
-<p>  Product Strategy</p>
+<p>Content Strategy</p>
 
- <p>UX/UI Design</p>
+<p>Social Media Content</p>
 
-<p>Web Applications</p>
+<p>Copywriting & Brand Messaging</p>
 
-<p>SaaS Products</p>
+<p>Content Planning & Calendars</p>
 
-<p>E-commerce Platforms</p>
+<p>Short-form Video Content</p>
 
-<p> Packaging & Marketing Assets.</p>
+<p>Campaign & Creative Development</p>
+
+<p>Content Production</p>
+
+<p>Content Performance & Optimization</p>
 <p> 
 MVP Development
 </p>
 
 </div>
-<Link href={'/portfolio/product-development'}>
-<Button variant='primary'>Explore Product Services</Button>
+<Link href={'/portfolio/content-strategy'}>
+<Button variant='primary'>Explore Services</Button>
 </Link>
 
         </motion.div>
-            <motion.div variants={child} className='space-y-6 py-6'>
-             <h2 className='text-gray-900 font-medium  text-3xl '>
-                Why Brand + Product?
-            </h2>
-            <p className='text-gray text-lg'>
-             Because your brand and your product shouldn't feel like they came from two different companies. Your identity creates the expectation and your product delivers the experience.
-            </p>
-               <p className='text-gray text-lg'>
-          And we connect the two.
-            </p>
-               <p className='text-gray text-lg'>
-         The way your business looks, communicates and the way it works all working towards the same idea.
-            </p>
-
-
-</motion.div>
-
-<Button variant='primary' onClick={()=>setShowModal(true)}>Book a consultation call</Button>
+            
 
 
      <AnimatePresence >
